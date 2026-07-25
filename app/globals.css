@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #061a2f;
+  --navy-light: #0b2c4b;
+  --gold: #d9a441;
+  --gold-light: #f0c875;
+  --ivory: #f7f3ea;
+  --ink: #162236;
+  --muted: #667085;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, blockquote {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+::selection {
+  color: var(--navy);
+  background: var(--gold-light);
+}
+
+.section-shell {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.glass {
+  background: rgba(6, 26, 47, 0.82);
+  border: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(16px);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hero-background {
+  background:
+    linear-gradient(90deg, rgba(6,26,47,.99) 0%, rgba(6,26,47,.93) 48%, rgba(6,26,47,.68) 100%),
+    radial-gradient(circle at 85% 18%, rgba(217,164,65,.22), transparent 28%),
+    linear-gradient(135deg, #061a2f, #0b2c4b);
+}
+
+.hero-pattern {
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.review-glow {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(217,164,65,.18), transparent 28%),
+    radial-gradient(circle at 88% 72%, rgba(6,26,47,.12), transparent 30%),
+    #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .section-shell {
+    width: min(100% - 1.25rem, 1180px);
+  }
+}
