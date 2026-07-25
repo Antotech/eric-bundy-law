@@ -3,14 +3,13 @@
 import { MessageCircle } from "lucide-react";
 
 const phone = "12675550198";
-const message = encodeURIComponent("Hello Eric, I would like to discuss a legal matter.");
+const message = encodeURIComponent(
+  "Hello Eric, I would like to discuss a legal matter."
+);
 
 export default function WhatsAppButton({
   floating = false,
-  label = "Chat on WhatsApp"
-}: {
-  floating?: boolean;
-  label?: string;
+  label = "Chat on WhatsApp",
 }) {
   const href = `https://wa.me/${phone}?text=${message}`;
 
